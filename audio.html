@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="audio_player.js"></script>
+    <style>
+      .player   { background-color: #e9e9e9; border: 1px solid #ddd; width: 300px; padding: 5px; }
+      .player .btn { cursor:pointer; float: left; padding: 0 2px 2px 2px; color: #fff; background-color: #343e54; font-weight: bold; font-size: 14px; border-radius: 10px; width: 15px; height: 15px; text-align: center; }
+      .timeline { float: left; width: 91%; height: 10px; background-color: #fff; border: 1px solid #ddd; margin: 3px 0 0 5px; }
+      .progress { background-color: #343e54; width: 0%; height: 10px; }
+      .clear { clear: both; }
+    </style>
+  </head>
+  <body>
+    
+    <div class="player" >
+      <div class="btn">&gt;</div>
+      <div class="timeline"><div class="progress"></div></div>
+      <audio id="audio" src="feliz_cumple.ogg" preload="none" ></audio>
+      <div class="clear"></div>
+    </div>
+    
+    <script type="text/javascript">
+      $(function(){
+        $('.player').audioPlayer();
+      });
+    </script>
+    
+  </body>
+</html>
